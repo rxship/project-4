@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "NCPL DR Demo";
+}
+
+<style>
+    .region-banner {
+        padding: 40px;
+        text-align: center;
+        background-color: #0078d4;
+        color: white;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+    .region-banner h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+    .region-banner p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="region-banner">
+    <h1>🟦 PRIMARY REGION</h1>
+    <p>Serving from <strong>Central US</strong></p>
+    <p>Host: @System.Net.Dns.GetHostName()</p>
+    <p>Time: @DateTime.UtcNow.ToString("u")</p>
+</div>
